@@ -514,5 +514,7 @@
 		<image file="elevated+SW.png" />
 		<image file="elevated+W.png" />
 		<image file="elevated.png" />
+		
+		<image file="ERR.png" />
 	</atlas>
 </resources>

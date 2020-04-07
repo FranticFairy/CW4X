@@ -22,7 +22,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Temporary Harbour");
+        return qsTr("Docks");
     };
     this.getBaseTerrain = function(building)
     {

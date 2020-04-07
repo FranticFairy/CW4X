@@ -31,6 +31,7 @@ var Constructor = function () {
         ["STREET", 1],
         ["TELEPORTTILE", 0],
         ["URBAN", 1],
+        ["ELEVATED", 2],
         ["WASTELAND", 3],
         ["HQ", 1],
         ["STATION", 1],
@@ -45,7 +46,11 @@ var Constructor = function () {
         ["SILO", 1],
         ["SILO_ROCKET", 1],
         ["TOWER", 1],
-        ["ELEVATED", 2],
+        ["SUBURB", 1],
+        ["RURAL", 1],
+        ["INDUSTRY", 1],
+        ["TRADEHUB", 1],
+        ["CANAL", 1],
         ["TOWN", 1]
     ];
 

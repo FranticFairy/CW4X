@@ -25,6 +25,7 @@ var Constructor = function()
         ["RAILCROSS", 1],
         ["RAILWAY", 2],
         ["RIVER", 1],
+        ["FORD", 1],
         ["ROUGH_SEA", 1],
         ["RUIN", 1],
         ["SEA", 1],
@@ -49,6 +50,11 @@ var Constructor = function()
         ["SILO", 1],
         ["SILO_ROCKET", 1],
         ["TOWER", 1],
+        ["SUBURB", 1],
+        ["RURAL", 1],
+        ["INDUSTRY", 1],
+        ["TRADEHUB", 1],
+        ["CANAL", 1],
         ["TOWN", 1]
     ];
 

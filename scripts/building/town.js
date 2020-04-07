@@ -33,6 +33,29 @@ var Constructor = function()
                "<div c='#00ff00'>" + qsTr("resupply") + "</div>" +
                "<r>" + qsTr(".") + "</r>";
     };
+    this.startOfTurn = function(building)
+    {
+        if (building.getOwner() !== null)
+        {
+            BUILDING.replenishUnit(building);
+
+            var terrain = building.getTerrain();
+            if(terrain != null) {
+                var surroundings = terrain.getSurroundings("SUBURB,CANAL",false, false, GameEnums.Directions_All, false, true);
+                var suburbs = surroundings.replace(/[^+]/g, "").length;
+                var owner = building.getOwner();
+                var moneyMod = (Math.round(owner.getFundsModifier() * 100) / 100);
+                var surroundings2 = terrain.getSurroundings("RURAL",false, false, GameEnums.Directions_All, false, true);
+                var rurals = surroundings2.replace(/[^+]/g, "").length;
+                owner.addFunds((1000 + (suburbs * 500) + (rurals * 250)) * moneyMod);
+
+                ACTION_CITY_EXPAND.perform(building,terrain);
+            }
+        }
+
+        
+    };
+    
 }
 
 Constructor.prototype = BUILDING;

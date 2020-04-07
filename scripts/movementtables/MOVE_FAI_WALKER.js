@@ -45,6 +45,11 @@ var Constructor = function () {
         ["SILO", 1],
         ["SILO_ROCKET", 1],
         ["TOWER", 1],
+        ["SUBURB", 1],
+        ["RURAL", 1],
+        ["INDUSTRY", 1],
+        ["TRADEHUB", 1],
+        ["CANAL", 1],
         ["TOWN", 1]
     ];
 

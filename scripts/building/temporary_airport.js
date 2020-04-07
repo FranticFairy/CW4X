@@ -23,7 +23,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Temporary Airport");
+        return qsTr("Airstrip");
     };
     this.getActions = function()
     {

@@ -189,5 +189,7 @@
 		<image file="FAI_TANK_SWEEP+mask.png" />
 		<image file="FAI_TANK_SWEEP.png" />
 		
+		<image file="FAI_4X_SETTLER+mask.png" />
+		<image file="FAI_4X_SETTLER.png" />
 	</atlas>
 </resources>

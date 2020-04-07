@@ -2,6 +2,10 @@ var Constructor = function()
 {
     this.init = function(unit)
     {
+        unit.setAmmo1(1);
+        unit.setMaxAmmo1(1);
+        unit.setWeapon1ID("");
+
         unit.setFuel(80);
         unit.setMaxFuel(80);
         unit.setBaseMovementPoints(6);
@@ -27,7 +31,7 @@ var Constructor = function()
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
-        return "ACTION_SUPPORTSINGLE_PICKUP,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
+        return "ACTION_BUILD_INFRA_STREET,ACTION_BUILD_INFRA_BRIDGE,ACTION_BUILD_INFRA_RAILWAY,ACTION_BUILD_INFRA_RAILCROSS,ACTION_BUILD_INFRA_RAILBRIDGE,ACTION_BUILD_TEMP_AIRPORT,ACTION_BUILD_TEMP_HARBOUR,ACTION_PLACE_LANDMINE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
     this.getMovementType = function()
     {
@@ -39,15 +43,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("ARV")
-    };
-    this.getLoadingPlace = function()
-    {
-        return 1;
-    };
-    this.getTransportUnits = function()
-    {
-        return ["FAI_TANK_LIGHT","FAI_TANK_BATTLE","FAI_TANK_HEAVY","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_LAUNCHER_SAM","FAI_LAUNCHER_RKT","FAI_LAUNCHER_ASM","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR"];
+        return qsTr("Engineering Vehicle")
     };
     this.canMoveAndFire = function()
     {
@@ -55,7 +51,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr("Sometimes, your armoured vehicles are in need of rescue. In this case, the ARV is your best choice. It is capable of picking up a single allied vehicle from an adjacent tile and transporting them to safety, but it is unarmed.");
+        return qsTr("Engineer teams are reliable non-combat troops that can build roads, railroads, airstrips and docks.");
     };
     this.getUnitType = function()
     {

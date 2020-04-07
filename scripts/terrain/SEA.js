@@ -6,8 +6,8 @@ SEA.loadOverlaySprite = function (terrain) {
     // load river overlay
     var surroundingsSea = terrain.getSurroundings("SEA", true, false, GameEnums.Directions_All, false);
     var surroundingsSeaDirect = terrain.getSurroundings("SEA", true, false, GameEnums.Directions_Direct, false);
-    var surroundingsRiver = terrain.getSurroundings("RIVER,HARBOUR,FORD", false, false, GameEnums.Directions_Direct, false, true);
-    var surroundingsRiver2 = terrain.getSurroundings("RIVER,HARBOUR,FORD", false, false, GameEnums.Directions_All, false, true);
+    var surroundingsRiver = terrain.getSurroundings("RIVER,HARBOUR,FORD,CANAL", false, false, GameEnums.Directions_Direct, false, true);
+    var surroundingsRiver2 = terrain.getSurroundings("RIVER,HARBOUR,FORD,CANAL", false, false, GameEnums.Directions_All, false, true);
     var surroundingsBridge = terrain.getSurroundings("BRIDGE",false,false, GameEnums.Directions_Direct, false, true);
 
     if(map != null) {

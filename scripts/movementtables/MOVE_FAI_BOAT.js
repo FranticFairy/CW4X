@@ -11,6 +11,7 @@ var Constructor = function () {
         ["TELEPORTTILE", 0],
         ["HARBOUR", 1],
         ["TEMPORARY_HARBOUR", 1],
+        ["CANAL", 1],
         ["OILRIG", 2]
     ];
 

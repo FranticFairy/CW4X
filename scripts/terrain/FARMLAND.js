@@ -23,7 +23,7 @@ var Constructor = function()
     };
     this.loadBaseSprite = function(terrain)
     {
-        terrain.loadBaseSprite("farmland");
+        terrain.loadBaseSprite("err");
     };
     this.getMiniMapIcon = function()
     {

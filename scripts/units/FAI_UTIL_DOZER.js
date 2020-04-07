@@ -34,7 +34,7 @@ var Constructor = function()
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
-        return "ACTION_BUILD_TEMP_AIRPORT,ACTION_BUILD_TEMP_HARBOUR,ACTION_PLACE_LANDMINE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
+        return "ACTION_BUILD_BUILDING_FACTORY,ACTION_BUILD_BUILDING_AIRPORT,ACTION_BUILD_BUILDING_HARBOUR,ACTION_BUILD_BUILDING_STATION,ACTION_BUILD_BUILDING_INDUSTRY,ACTION_BUILD_BUILDING_TRADEHUB,ACTION_BUILD_BUILDING_CANAL,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
     this.getMovementType = function()
     {
@@ -54,7 +54,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr("For building frontline structures, lightly-armoured dozers are your best bet. Though they don't last particularly long, they often last just long enough to get the job done..");
+        return qsTr("For building up your empire, dedicated construction teams are your best bet. They can build anything from Canals to Factories and everything in-between.");
     };
     this.getUnitType = function()
     {

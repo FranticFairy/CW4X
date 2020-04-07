@@ -36,9 +36,15 @@ var Constructor = function()
     {
         return 4;
     };
+
+    this.getActions = function()
+    {
+        // returns a string id list of the actions this building can perform
+        return "ACTION_BUILD_UNITS";
+    };
     this.getConstructionList = function(building)
     {
-        return ["FAI_SUPP_SECURITY","FAI_SUPP_GUERILLA","FAI_UTIL_SUPPLY","FAI_TRANS_HALFT","FAI_IFV","FAI_IFV_AMPHI","FAI_IFV_HEAVY","FAI_GUN_ARTY","FAI_GUN_AT","FAI_TANK_LIGHT","FAI_TANK_BATTLE","FAI_TANK_HEAVY","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_LAUNCHER_SAM","FAI_LAUNCHER_WMD","FAI_LAUNCHER_RKT","FAI_LAUNCHER_ASM","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR","FAI_TANK_HOVER","FAI_HOVERCRAFT","FAI_HOVER_HEAVY","FAI_HOVER_TRANS","FAI_TANK_MECH","FAI_UTIL_AVLB","FAI_UTIL_ARV","FAI_UTIL_DOZER","FAI_CASH_TRUCK","FAI_TANK_SWEEP"];
+        return ["FAI_SUPP_SECURITY","FAI_SUPP_GUERILLA","FAI_TRANS_HALFT","FAI_UTIL_SUPPLY","FAI_GUN_ARTY","FAI_GUN_AT","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR","FAI_TANK_LIGHT","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_4X_SETTLER","FAI_UTIL_ARV","FAI_UTIL_DOZER"];
     };
     this.getMiniMapIcon = function()
     {
@@ -100,6 +106,28 @@ var Constructor = function()
                "<div c='#00ff00'>" + qsTr("Ground ") + "</div>" +
                "<r>" + qsTr("units can ") + "</r>" +
                "<div c='#00ff00'>" + qsTr("resupply.") + "</div>";
+    };
+    this.startOfTurn = function(building)
+    {
+        if (building.getOwner() !== null)
+        {
+            BUILDING.replenishUnit(building);
+
+            var terrain = building.getTerrain();
+            if(terrain != null) {
+                var surroundings = terrain.getSurroundings("SUBURB,CANAL",false, false, GameEnums.Directions_All, false, true);
+                var suburbs = surroundings.replace(/[^+]/g, "").length;
+                var owner = building.getOwner();
+                var moneyMod = (Math.round(owner.getFundsModifier() * 100) / 100);
+                var surroundings2 = terrain.getSurroundings("RURAL",false, false, GameEnums.Directions_All, false, true);
+                var rurals = surroundings2.replace(/[^+]/g, "").length;
+                owner.addFunds((2500 + (suburbs * 500) + (rurals * 250)) * moneyMod);
+
+                ACTION_CITY_EXPAND.perform(building,terrain);
+            }
+        }
+
+        
     };
 }
 

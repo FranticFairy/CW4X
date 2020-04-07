@@ -9,6 +9,7 @@ var Constructor = function () {
         ["SEA", 1],
         ["TELEPORTTILE", 0],
         ["HARBOUR", 1],
+        ["CANAL", 1],
         ["TEMPORARY_HARBOUR", 1]
     ];
 

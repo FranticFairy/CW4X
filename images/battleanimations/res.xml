@@ -238,5 +238,8 @@
 		<image file="FAI_PLANE_TANKBUSTER+2+mask.png" />
 		<image file="FAI_PLANE_TANKBUSTER+2.png" />
 		
+		<image file="FAI_4X_SETTLER+mask.png" />
+		<image file="FAI_4X_SETTLER.png" />
+		
 	</atlas>
 </resources>

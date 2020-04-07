@@ -81,7 +81,20 @@
 		<image file="temporary_harbour.png" cols = "2" />
 		<image file="temporary_harbour+mask.png" cols = "2" />
 		<image file="temporary_harbour+neutral.png" cols = "2" />
-
 		
+		<image file="farmland.png" />
+		<image file="urban.png" />
+		<image file="canal.png" />
+		<image file="no-own+mask.png" cols = "2" />
+		
+		<!-- industry -->
+		<image file="industry.png" cols = "2" />
+		<image file="industry+mask.png" cols = "2" />
+		<image file="industry+neutral.png" />
+		
+		<!-- trade hub -->
+		<image file="tradehub.png" cols = "2" />
+		<image file="tradehub+mask.png" cols = "2" />
+		<image file="tradehub+neutral.png" />
 	</atlas>
 </resources>
