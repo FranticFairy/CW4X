@@ -86,6 +86,7 @@
 		<image file="urban.png" />
 		<image file="canal.png" />
 		<image file="no-own+mask.png" cols = "2" />
+		<image file="fire.png" cols = "6" />
 		
 		<!-- industry -->
 		<image file="industry.png" cols = "2" />

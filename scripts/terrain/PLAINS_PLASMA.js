@@ -12,5 +12,6 @@ PLAINS_PLASMA.getTerrainAnimationBackground = function(unit, terrain)
 };
 PLAINS_PLASMA.init = function (terrain)
 {
+    terrain.setTerrainName(PLAINS_PLASMA.getName());
     terrain.setVisionHigh(0);
 };

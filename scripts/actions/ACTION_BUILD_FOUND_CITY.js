@@ -68,6 +68,9 @@ var Constructor = function () {
 
     this.updateSurroundings = function (X, Y) {
         var targetTerrain = map.getTerrain(X, Y);
+        if (targetTerrain != null) {
+            targetTerrain.loadSprites();
+        }
         targetTerrain = map.getTerrain(X, Y - 1)
         if (targetTerrain != null) {
             targetTerrain.loadSprites();

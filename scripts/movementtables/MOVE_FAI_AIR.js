@@ -71,6 +71,7 @@ var Constructor = function () {
         ["INDUSTRY", 1],
         ["TRADEHUB", 1],
         ["CANAL", 1],
+        ["BURNING", 1],
         ["TOWN", 1]
     ];
 

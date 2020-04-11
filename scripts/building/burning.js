@@ -3,15 +3,20 @@ var Constructor = function()
     // called for loading the main sprite
     this.loadSprites = function(building, neutral)
     {
-        building.loadSprite("farmland", false);
+        building.loadSprite("fire", false);
         if (building.getOwnerID() >= 0 && !neutral)
         {
             building.loadSprite("no-own+mask", true);
         }
     };
+    
+    this.getBaseTerrain = function(building)
+    {
+        return ["FOREST"];
+    };
     this.getName = function()
     {
-        return qsTr("Rural");
+        return qsTr("Fire");
     };
 
     this.getDescription = function()
@@ -20,23 +25,24 @@ var Constructor = function()
     };
     this.startOfTurn = function(building)
     {
-    };
-    this.getTerrainAnimationForeground = function(unit, terrain)
-    {
-        return "fore_farm";
+        ACTION_HANDLER_FIRE.perform(building);
     };
 
+    this.getTerrainAnimationForeground = function(unit, terrain)
+    {
+        return "fore_scorched";
+    };
     this.getTerrainAnimationBackground = function(unit, terrain)
     {
-        return "back_plains";
+        return "back_scorched";
     };
-    
+
     this.getMiniMapIcon = function()
     {
-        return "minimap_farmland";
+        return "minimap_fire";
     };
     
 }
 
 Constructor.prototype = BUILDING;
-var RURAL = new Constructor();
+var BURNING = new Constructor();

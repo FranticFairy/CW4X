@@ -14,6 +14,10 @@ var Constructor = function()
         unit.loadSprite("FAI_TRAIN_SUPPLY", false);
         unit.loadSprite("FAI_TRAIN_SUPPLY+mask", true);
     };
+    this.startOfTurn = function(unit)
+    {
+        ACTION_SUPPORTALL_RATION.giveRation(unit);
+    };
     this.doWalkingAnimation = function(action)
     {
         var unit = action.getTargetUnit();

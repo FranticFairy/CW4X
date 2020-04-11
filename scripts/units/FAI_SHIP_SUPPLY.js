@@ -16,6 +16,7 @@ var Constructor = function()
     };
     this.startOfTurn = function(unit)
     {
+        ACTION_SUPPORTALL_RATION.giveRation(unit);
         // pay unit upkeep
         var fuelCosts = 1 + unit.getFuelCostModifier(Qt.point(unit.getX(), unit.getY()), 1);
         if (fuelCosts < 0)
